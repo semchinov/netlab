@@ -30,3 +30,29 @@ python -m src.http_client "https://example.org/" \
     --max-redirects 2 \
     --separator "===== PAGE BODY ====="
 ```
+
+
+### POP3-client
+
+```bash
+python -m src.pop3_client --help
+```
+
+#### Mock POP3 server
+```bash
+python -m src.mock_pop3_server
+```
+
+```bash
+python -m src.pop3_client
+```
+
+```bash
+python -m src.pop3_client \
+  --host 127.0.0.1 \
+  --port 1100 \
+  --user test \
+  --password secret \
+  --timeout 15 \
+  --separator "===== MESSAGE BODY ====="
+```
